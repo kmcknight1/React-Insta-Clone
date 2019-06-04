@@ -9,9 +9,9 @@ function App() {
 
   return (
     <div className="app">
-      <header className="header">
+ 
        <SearchBar />
-      </header>
+     
 
       {data.map(item => (
           <PostContainer data={item} />
