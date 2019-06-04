@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./CommentSection.css";
+// import moment from 'moment';
 
 function CommentSection({ data }) {
   const [commentText, setCommentText] = useState("");
   const [comments, setComments] = useState(data.comments);
+
 
   return (
     <div className="comment-section">
@@ -34,6 +36,7 @@ function CommentSection({ data }) {
           onChange={e => setCommentText(e.target.value)}
         />
       </form>
+      <p>{data.timestamp}</p>
     </div>
   );
 }

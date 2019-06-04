@@ -2,9 +2,9 @@
     width: 95%;
 }
 
-.addComment {
+/* .addComment {
     margin-bottom: 1rem;
-}
+} */
 
 .addComment:focus {
     border: 1px solid lightgrey;
