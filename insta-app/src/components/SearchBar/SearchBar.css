@@ -1,0 +1,27 @@
+.searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 710px;
+    border: 1px solid red;
+}
+
+.logoImg {
+    max-width: 1.5rem;
+    margin: 1rem 0 1rem 0;
+    opacity: 0.7;
+}
+
+.logoText {
+    max-width: 5rem;
+    max-height: 4rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.search {
+    border: 1px solid lightgrey;
+    text-align: center;
+    color: lightgrey;
+    margin: 1rem;
+}
+

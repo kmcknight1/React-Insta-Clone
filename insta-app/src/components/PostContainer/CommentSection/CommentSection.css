@@ -1,0 +1,15 @@
+.comment-section {
+    width: 95%;
+}
+
+.addComment {
+    margin-bottom: 1rem;
+}
+
+.addComment:focus {
+    border: 1px solid lightgrey;
+    outline: none;
+    border-radius: 8px;
+    padding: 0.3rem;
+    width: 90%;
+}
