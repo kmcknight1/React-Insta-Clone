@@ -1,27 +1,32 @@
 .searchBar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 710px;
-   
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 710px;
 }
 
 .insta-icon {
-    border-right: 1px solid grey;
-    padding-right: 0.5rem;
-    opacity: 0.8;
+  border-right: 1px solid grey;
+  padding-right: 0.5rem;
+  opacity: 0.8;
 }
 
 .logoText {
-    max-width: 6rem;
-    max-height: 5rem;
+  max-width: 6rem;
+  max-height: 5rem;
 }
 
 .search {
-    border: 1px solid lightgrey;
-    text-align: center;
-    color: lightgrey;
-    margin: 1rem;
+  border: 1px solid lightgrey;
+  text-align: center;
+  color: lightgrey;
+  margin: 0 1rem 0 1rem;
+  height: 1rem;
+}
+
+.search:focus {
+  outline: none;
+  border-radius: 8px;
 }
 
 .heart {
