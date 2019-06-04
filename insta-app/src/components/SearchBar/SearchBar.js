@@ -1,25 +1,21 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { fab } from '@fortawesome/free-brands-svg-icons';
-// import { faHeart} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { far, faHeart, faUser } from '@fortawesome/free-regular-svg-icons'
+import { fas, faSearch } from '@fortawesome/free-solid-svg-icons'
 
-// library.add(
-//     fab, faHeart
-// )
 
+library.add(fab, far, fas, faHeart, faInstagram, faUser, faSearch)
 
 function SearchBar() {
   const [search, setSearch] = useState("");
 
   return (
     <div className="searchBar">
-      <img
-        className="logoImg"
-        src="https://cdn2.iconfinder.com/data/icons/social-networks-18/100/Instagram_logo-512.png"
-        alt='InstagramIcon'
-      />
+      <FontAwesomeIcon icon={['fab', 'instagram']} className='insta-icon' size='2x' />
+      
       <img
         className="logoText"
         src="https://www.wslogos.com/wp-content/uploads/2019/02/latest-instagram-2-logo-svg-vector-png-transparent-vector-logo-supply-of-the-day.png"
@@ -35,6 +31,9 @@ function SearchBar() {
         />
       </form>
     
+      <FontAwesomeIcon icon={['far', 'heart']} className='heart' size='2x' />
+      <FontAwesomeIcon icon={['far', 'user']} className='user' size='2x' />
+
     </div>
   );
 }

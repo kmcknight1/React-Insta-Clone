@@ -3,19 +3,18 @@
     align-items: center;
     justify-content: space-between;
     max-width: 710px;
-    border: 1px solid red;
+   
 }
 
-.logoImg {
-    max-width: 1.5rem;
-    margin: 1rem 0 1rem 0;
-    opacity: 0.7;
+.insta-icon {
+    border-right: 1px solid grey;
+    padding-right: 0.5rem;
+    opacity: 0.8;
 }
 
 .logoText {
-    max-width: 5rem;
-    max-height: 4rem;
-    margin: 1rem 0 1rem 0;
+    max-width: 6rem;
+    max-height: 5rem;
 }
 
 .search {
@@ -25,3 +24,12 @@
     margin: 1rem;
 }
 
+.heart {
+  opacity: 0.8;
+  margin-right: 0.5rem;
+}
+
+.user {
+  opacity: 0.8;
+  margin-right: 0.5rem;
+}
