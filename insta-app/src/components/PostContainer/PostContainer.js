@@ -4,11 +4,11 @@ import Post from "./Post/Post";
 import CommentSection from "./CommentSection/CommentSection";
 import PropTypes from "prop-types";
 
-function PostContainer({ data }) {
+function PostContainer(props) {
   return (
     <div className="post-container">
-      <Post data={data} />
-      <CommentSection data={data} />
+      <Post data={props.data} />
+      <CommentSection data={props.data} />
     </div>
   );
 }

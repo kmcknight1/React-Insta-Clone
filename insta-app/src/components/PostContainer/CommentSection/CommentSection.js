@@ -3,6 +3,7 @@ import "./CommentSection.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { far, faHeart, faComment } from "@fortawesome/free-regular-svg-icons";
+
 // import moment from 'moment';
 
 library.add(far, faHeart, faComment);
@@ -10,19 +11,33 @@ library.add(far, faHeart, faComment);
 function CommentSection({ data }) {
   const [commentText, setCommentText] = useState("");
   const [comments, setComments] = useState(data.comments);
-  const [likes, setLikes] = useState(data.likes);
+  let [liked, setLiked] = useState(data.likes);
+  let [focus, setFocus] = useState(false);
 
   return (
     <div className="comment-section">
-      <FontAwesomeIcon
-        icon={["far", "heart"]}
-        className="like"
-        size="2x"
-        onClick={e => {
-          e.preventDefault();
-          setLikes((data.likes += 1));
-        }}
-      />
+      {liked ? (
+        <FontAwesomeIcon
+          icon={["far", "heart"]}
+          className="not-liked"
+          size="2x"
+          onClick={e => {
+            e.preventDefault();
+            setLiked(((data.likes += 1), (liked = false)));
+          }}
+        />
+      ) : (
+        <FontAwesomeIcon
+          icon={["far", "heart"]}
+          className="liked"
+          size="2x"
+          onClick={e => {
+            e.preventDefault();
+            setLiked(((data.likes -= 1), (liked = true)));
+          }}
+        />
+      )}
+
       <FontAwesomeIcon
         icon={["far", "comment"]}
         className="comment"
@@ -44,17 +59,31 @@ function CommentSection({ data }) {
             username: "super_cool_username",
             text: commentText
           };
-          setComments([...comments, newComment]);
+          newComment.text !== "" && setComments([...comments, newComment]);
           setCommentText("");
         }}
       >
         <input
-          className="addComment"
+          className="comment-input"
           type="text"
           placeholder="Add a comment..."
           value={commentText}
-          onChange={e => setCommentText(e.target.value)}
+          onFocus={() => {
+            setFocus(true);
+          }}
+          onBlur={() => {
+            setFocus(false);
+          }}
+          onChange={e => {
+            e.target.value !== "" && setCommentText(e.target.value);
+          }}
         />
+        <button
+          className={focus ? "add-comment-focused" : "add-comment-not-focused"}
+          type="submit"
+        >
+          ...
+        </button>
       </form>
       <p>{data.timestamp}</p>
     </div>
