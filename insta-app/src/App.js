@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import PostsPage from "./components/PostsPage/PostsPage";
+import withAuthenticate from "./components/withAuthenticate";
 
 function App() {
   return (
@@ -10,4 +11,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticate(App);
