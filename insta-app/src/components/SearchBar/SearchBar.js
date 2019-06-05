@@ -31,6 +31,7 @@ function SearchBar(props) {
           className="search"
           type="text"
           placeholder="Search"
+          title="Search posts by username"
           value={props.search}
           onChange={e => props.setSearch(e.target.value)}
         />

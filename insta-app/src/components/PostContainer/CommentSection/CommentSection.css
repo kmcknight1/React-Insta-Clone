@@ -14,6 +14,10 @@
   opacity: 0.8;
 }
 
+span:hover {
+  cursor: pointer;
+}
+
 .comment {
   opacity: 0.8;
   margin-left: 0.5rem;
@@ -23,6 +27,7 @@
   width: 80%;
   padding: 0.3rem;
   outline: none;
+  border: none;
 }
 
 .comment-input:focus {
@@ -36,6 +41,10 @@
   border-radius: 8px;
   background-color: white;
   outline: none;
+}
+
+.add-comment-focused:hover {
+  cursor: pointer;
 }
 
 .add-comment-not-focused {

@@ -17,25 +17,30 @@ function CommentSection({ data }) {
   return (
     <div className="comment-section">
       {liked ? (
-        <FontAwesomeIcon
-          icon={["far", "heart"]}
-          className="not-liked"
-          size="2x"
-          onClick={e => {
-            e.preventDefault();
-            setLiked(((data.likes += 1), (liked = false)));
-          }}
-        />
+        <span>
+          <FontAwesomeIcon
+            icon={["far", "heart"]}
+            className="not-liked"
+            title="Like"
+            size="2x"
+            onClick={e => {
+              e.preventDefault();
+              setLiked(((data.likes += 1), (liked = false)));
+            }}
+          />
+        </span>
       ) : (
-        <FontAwesomeIcon
-          icon={["far", "heart"]}
-          className="liked"
-          size="2x"
-          onClick={e => {
-            e.preventDefault();
-            setLiked(((data.likes -= 1), (liked = true)));
-          }}
-        />
+        <span>
+          <FontAwesomeIcon
+            icon={["far", "heart"]}
+            className="liked"
+            size="2x"
+            onClick={e => {
+              e.preventDefault();
+              setLiked(((data.likes -= 1), (liked = true)));
+            }}
+          />
+        </span>
       )}
 
       <FontAwesomeIcon
@@ -80,6 +85,7 @@ function CommentSection({ data }) {
         />
         <button
           className={focus ? "add-comment-focused" : "add-comment-not-focused"}
+          title="Add Comment"
         >
           ...
         </button>
