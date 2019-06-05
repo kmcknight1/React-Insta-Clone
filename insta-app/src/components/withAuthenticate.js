@@ -1,9 +1,13 @@
 import React from "react";
 
-const withAuthenticate = Component =>
+const withAuthenticate = (Component, Redirect) =>
   class extends React.Component {
     render() {
-      return <Component />;
+      if (false) {
+        return <Component />;
+      } else {
+        return <Redirect />;
+      }
     }
   };
 

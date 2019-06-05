@@ -9,7 +9,7 @@
   color: darkslategray;
 }
 
-header {
+.search-header {
   top: 0;
   position: fixed;
   height: 4.5rem;

@@ -17,7 +17,7 @@ function PostsPage() {
 
   return (
     <div className="posts">
-      <header>
+      <header className="search-header">
         <SearchBar search={search} setSearch={setSearch} />
       </header>
 
