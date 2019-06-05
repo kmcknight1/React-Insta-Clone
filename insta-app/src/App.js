@@ -4,11 +4,13 @@ import PostsPage from "./components/PostsPage/PostsPage";
 import withAuthenticate from "./components/withAuthenticate";
 
 function App() {
+  const ComponentFromWithAuthenticate = withAuthenticate(PostsPage);
+
   return (
     <div className="app">
-      <PostsPage />
+      <ComponentFromWithAuthenticate />
     </div>
   );
 }
 
-export default withAuthenticate(App);
+export default App;
