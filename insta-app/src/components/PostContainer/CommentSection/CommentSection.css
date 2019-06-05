@@ -1,15 +1,22 @@
 .comment-section {
-    width: 95%;
+  width: 95%;
+  margin-top: 0.5rem;
 }
 
-.addComment {
-    margin-bottom: 1rem;
+.like {
+  opacity: 0.8;
+  margin-right: 0.5rem;
+}
+
+.comment {
+  opacity: 0.8;
+  margin-left: 0.5rem;
 }
 
 .addComment:focus {
-    border: 1px solid lightgrey;
-    outline: none;
-    border-radius: 8px;
-    padding: 0.3rem;
-    width: 90%;
+  border: 1px solid lightgrey;
+  outline: none;
+  border-radius: 8px;
+  padding: 0.3rem;
+  width: 90%;
 }
