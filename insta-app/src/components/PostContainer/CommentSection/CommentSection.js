@@ -80,7 +80,6 @@ function CommentSection({ data }) {
         />
         <button
           className={focus ? "add-comment-focused" : "add-comment-not-focused"}
-          type="submit"
         >
           ...
         </button>

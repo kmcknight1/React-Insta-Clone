@@ -19,12 +19,16 @@
   margin-left: 0.5rem;
 }
 
+.comment-input {
+  width: 80%;
+  padding: 0.3rem;
+  outline: none;
+}
+
 .comment-input:focus {
   border: 1px solid lightgrey;
-  outline: none;
+
   border-radius: 8px;
-  padding: 0.3rem;
-  width: 80%;
 }
 
 .add-comment-focused {
@@ -35,5 +39,7 @@
 }
 
 .add-comment-not-focused {
-  display: none;
+  border: none;
+  background-color: white;
+  outline: none;
 }
