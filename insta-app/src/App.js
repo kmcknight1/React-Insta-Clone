@@ -1,19 +1,15 @@
 import React from "react";
 import "./App.css";
-import dummyData from "./dummy-data";
-import SearchBar from "./components/SearchBar/SearchBar";
-import PostContainer from "./components/PostContainer/PostContainer";
+import PostsPage from "./components/PostsPage/PostsPage";
+import LoginPage from "./components/LoginPage/LoginPage";
+import withAuthenticate from "./components/withAuthenticate";
 
 function App() {
-  const data = dummyData;
+  const ComponentFromWithAuthenticate = withAuthenticate(PostsPage, LoginPage);
 
   return (
     <div className="app">
-      <SearchBar data={data} />
-
-      {data.map(item => (
-        <PostContainer data={item} />
-      ))}
+      <ComponentFromWithAuthenticate />
     </div>
   );
 }

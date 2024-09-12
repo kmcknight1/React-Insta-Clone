@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./SearchBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -8,11 +8,9 @@ import { fas, faSearch } from "@fortawesome/free-solid-svg-icons";
 
 library.add(fab, far, fas, faHeart, faInstagram, faUser, faSearch);
 
-function SearchBar({ data }) {
-  const [search, setSearch] = useState("");
-
+function SearchBar(props) {
   return (
-    <div className="searchBar">
+    <div className="search-bar">
       <FontAwesomeIcon
         icon={["fab", "instagram"]}
         className="insta-icon"
@@ -33,8 +31,9 @@ function SearchBar({ data }) {
           className="search"
           type="text"
           placeholder="Search"
-          value={search}
-          onChange={e => setSearch(e.target.value)}
+          title="Search posts by username"
+          value={props.search}
+          onChange={e => props.setSearch(e.target.value)}
         />
       </form>
 
